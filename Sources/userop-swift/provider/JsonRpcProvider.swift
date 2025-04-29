@@ -30,7 +30,7 @@ public class JsonRpcProvider: Web3Provider {
             network = net
         } else if !ignoreNet {
             /// chain id could be a hex string or an int value.
-            let response: String = try await APIRequest.send(APIRequest.getNetwork.call, parameter: [], with: self).result
+            let response: String = try await APIRequest.send(APIRequest.getNetwork.call, parameters: [], with: self).result
             let result: UInt
             if response.hasHexPrefix() {
                 result = UInt(BigUInt(response, radix: 16) ?? Networks.Mainnet.chainID)
@@ -42,6 +42,6 @@ public class JsonRpcProvider: Web3Provider {
     }
 
     public func send<Result>(_ method: String, parameter: [Encodable]) async throws -> APIResponse<Result> {
-        return try await APIRequest.send(method, parameter: parameter, with: self)
+        return try await APIRequest.send(method, parameters: parameter, with: self)
     }
 }
