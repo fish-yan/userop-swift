@@ -1,8 +1,7 @@
-![Iotex-IoPay](https://github.com/iotexproject/userop-swift/assets/16026265/46911948-aa87-4fd3-9ddb-0a504f801f3f)
-
 
 # userop-swift
 
+[userop-kotlin version is here](https://github.com/iotexproject/userop-kt)
 
 
 ## About Account Abstraction Using Alt Mempool
