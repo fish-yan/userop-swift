@@ -16,7 +16,7 @@ let package = Package(
     ],
     dependencies: [
         .package(url: "https://github.com/attaswift/BigInt.git", from: "5.3.0"),
-        .package(url: "https://github.com/web3swift-team/web3swift.git", .upToNextMajor(from: "3.3.0"))
+        .package(url: "https://github.com/fish-yan/web3swift.git", branch: "onto"),
     ],
     targets: [
         // Targets are the basic building blocks of a package, defining a module or a test suite.
